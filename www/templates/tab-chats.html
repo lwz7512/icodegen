@@ -1,0 +1,25 @@
+<ion-view view-title="生成邀请码">
+  <ion-content>
+    <form name="phoneForm" ng-submit="generate()" ><!--start of form-->
+      <div class="list">
+        <label class="item item-input">
+          <input type="number" placeholder="手机号" ng-model="user.phonenumber" required>
+        </label>
+  <!--
+        <label class="item item-input">
+          <input type="text" placeholder="Last Name">
+        </label>
+  -->
+      </div>
+      <div class="padding">
+        <button type="submit" class="button button-block button-positive"
+                ng-disabled="phoneForm.$invalid">来一个</button>
+      </div>
+    </form>
+    <div class="padding">
+      <p class="advanced-panel">
+        邀请码：{{invitation.invitation_code}}
+      </p>  
+    </div>
+  </ion-content>
+</ion-view>
